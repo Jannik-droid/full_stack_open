@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant browser
+    participant server
+    Note left of browser: Payload: {"content":"","date":"2023-02-01T20:51:19.968Z"}
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: {"message":"note created"}
+    deactivate server
+    
+
+
+    Note left of browser: browser executes event handler that renders notes on display
+
+    
